@@ -1,0 +1,202 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-auto-rows: minmax(150px , auto);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+.grid-item{
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    
+}
+
+.img1{
+    border: 1px solid black;
+   padding:10px;
+  text-align: center;
+  gap: 20px;
+}
+.img1 img{
+    max-height: 100%;
+}
+@media(max-width:760px)
+{
+   .foods{
+     height: 70%;  
+   
+    }
+   
+}
+.foods{
+  width: 100%;
+ 
+  grid-template-columns: repeat(auto-fit,minmax(200px,600px));
+max-height: 100%;
+ display: grid;
+ gap: 2px;
+ padding:50px;
+
+ background-color: black;
+ grid-template-areas:
+ "vadapav pooranpoli"
+ "gravy bhaji"
+ "modak misalpav";
+  
+}
+
+.food1{
+   
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    justify-content: center; 
+     max-width: 50%;
+      max-height: 100%;
+
+}
+td{
+    cursor: pointer;
+}
+.food1:first-child{
+    background-image: url('Puran-Poli.jpg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+}
+.food1:nth-child(2){
+    background-image: url('Vada\ pav.jpeg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+   
+
+}
+.food1:nth-child(3){
+    background-image: url('Rassa-Non-Veg-Curry.jpg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+   
+
+}
+#vada{
+    grid-area: vadapav;
+}
+#poli{
+    grid-area: pooranpoli;
+}
+#rassa{
+    grid-area: gravy;
+}
+#pavbhaji{
+    grid-area: bhaji;
+    background-image: url('pavbhaji.jpeg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+
+}
+#modak{
+    grid-area: modak;
+    background-image: url('Modak.jpg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+
+}
+#misal{
+    grid-area: misalpav;
+    background-image: url('misal.jpeg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+}
+
+/* CSS for sidebar */
+#sidebar {
+    position: fixed;
+  display: none;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #f4f4f4;
+    transition: 0.3s ease-in-out;
+    overflow-y: auto;
+    padding-top: 20px;
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+.fa-x:hover{
+    border: 1px solid black;
+    color: gray;
+    padding: 2px 3px;
+}
+.fa-bars:hover{
+background-color: aliceblue;
+color: black;
+padding: 2px;
+
+
+}
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 10px 20px;
+}
+
+
+.map-container{
+    background-image: url('Maharashtra_Map_With_District_PNG_Transparent_With_Clear_Background_ID_290319_png_-_Free_PNG_Images-removebg-preview.png') ;
+    
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid black;
+}
+@media(max-width:768px){
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+    }
+.image-container .img1{
+   font-size: 5px;
+}
+ input{
+   width: 100px;
+    
+ }   
+ .foods{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #header a{
+font-size: 5px;
+ }
+ #header h3{
+font-size: 15px;
+ }
+ #header p{
+   font-size: 10px;
+ }
+ #sidebar li a{
+    font-size: 15px;
+ }
+}
