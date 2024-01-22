@@ -42,7 +42,7 @@ max-height: 100%;
  gap: 2px;
  padding:50px;
 
- background-color: black;
+ background-color: transparent;
  grid-template-areas:
  "vadapav pooranpoli"
  "gravy bhaji"
